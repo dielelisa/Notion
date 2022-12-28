@@ -149,23 +149,9 @@ quotes=[
 "You may have to fight a battle more than once to win it. ~Margaret Thatcher",
 ];
 
-const INTERVAL = 86400000;
 
-function dispalyQuote(){
-
-    document.getElementById('widget').innerHTML =quotes[0];
-    quotes.forEach((quote, i) => {
-        setTimeout(() => {
-            document.getElementById('widget').innerHTML =quote;
-        }, i * INTERVAL);  
-    });
-    }
-
-    function dispalyWidget() {
-        dispalyQuote();
-        setTimeout(dispalyWidget, quotes.length*INTERVAL);
-    }
-    dispalyWidget()
+var selectedQuote = _.sample(quotes);
+document.getElementById('widget').innerHTML = selectedQuote;
 
 </script>
 
