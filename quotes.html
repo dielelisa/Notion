@@ -150,7 +150,7 @@ quotes=[
 ];
 
 
-var selectedQuote = _.sample(quotes);
+var selectedQuote = Math.floor(Math.random() * quotes.length);
 document.getElementById('widget').innerHTML = selectedQuote;
 
 </script>
