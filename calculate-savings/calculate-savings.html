@@ -1,21 +1,45 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Calculate Savings Percentage</title>
+	<style>
+		* {
+			background-color:#F1F1EF;
+			font-family: sans-serif;
+		}
+	</style>
 </head>
 
-<body style="background-color:#F1F1EF;font-family: sans-serif">
+<body>
 		
-		<!-- Defines a field for entering a number-->
-		Salary: <input type="number" id="salary" size="10" />
+	<!-- Defines a field for entering a number-->
+	Salary: <input type="number" id="salary" size="10" />
 
-		<!-- onclick event is to call the function when user click on the button-->
-		<button onclick="percentage()">Calculate</button><br>
-
-		<!-- Read-only input field to display output and cannot be modified -->
-		<label id="amounts" for="amounts"></label>
+	<!-- onclick event is to call the function when user click on the button-->
+	<button onclick="percentage()">Calculate</button><br>
 	
+	<!-- Read-only input field to display output and cannot be modified -->
+	<label id="amounts" for="amounts"></label>
+	
+	<script>
+		function percentage() {
 
-	<script type="text/javascript" src="script.js"></script>
+			// Method returns the element of percent id
+			var percentHome = "12";
+			var percentVacation = "8";
+	
+			// Get the salary & label to show results
+			var num = document.getElementById("salary").value;
+	
+			//Calculate the percentages
+			var homeSavings = (num / 100) * percentHome;
+			var vacationSavings = (num / 100) * percentVacation;
+
+			// Show values
+			document.getElementById('amounts').innerHTML = "Home (12%): €" + homeSavings + "<br>" + "Vacation (8%): €" + vacationSavings;
+
+		}
+	</script>
 </body>
 
 </html>
