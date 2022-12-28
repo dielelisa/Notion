@@ -13,7 +13,7 @@ function percentage() {
 	var vacationSavings = (num / 100) * percentHome;
 
 	// Show values
-	label.innerHTML = "Home (12%): " + homeSavings + "</br>" + "Vacation (8%): " + vacationSavings;
+	label.textContent = "Home (12%): " + homeSavings + "</br>" + "Vacation (8%): " + vacationSavings;
 
 	//document.getElementById("amounts").value = 
 	//	"Home (12%): " + homeSavings + "<br>" + "Vacation (8%): " + vacationSavings ;
