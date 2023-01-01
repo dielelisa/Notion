@@ -1,54 +1,71 @@
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Greetings</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Greetings</title>
+	<head>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+			}
+            
+            .widget {
+              display: flex;
+              justify-content:center;
+			  padding: 5px 5px ;
+              align-items:center;
+              flex-direction: column;
+              max-width: 95%;
+              margin: auto;
+              border: 3px solid #fff;
+              border-radius: 5px;
+              box-shadow: 2px 2px 1px 0px #fff;
+        	}
 
-    <style>
-
-       
-
-    </style>
-</head>
-<body>
-   <script>
-        (function(d, s, id) {
-            if (d.getElementById(id)) {
-                if (window.__TOMORROW__) {
-                    window.__TOMORROW__.renderWidget();
-                }
-                return;
+			hr.dotted {
+				border-top: 3px dotted #bbb;
+			}
+            td {
+            	text-align:center;
+                font-size: 18px;
             }
-            const fjs = d.getElementsByTagName(s)[0];
-            const js = d.createElement(s);
-            js.id = id;
-            js.src = "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
 
-            fjs.parentNode.insertBefore(js, fjs);
-        })(document, 'script', 'tomorrow-sdk');
-        </script>
+		</style>
+	</head>
+	<body>
+    	<div class="widget">
 
-        <div class="tomorrow"
-           data-location-id="077340,013994,016259"
-           data-language="EN"
-           data-unit-system="METRIC"
-           data-skin="light"
-           data-widget-type="current6"
-           style="padding-bottom:22px;position:relative;"
-        >
-          <a
-            href="https://www.tomorrow.io/weather-api/"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-            style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;"
-          >
-            <img
-              alt="Powered by the Tomorrow.io Weather API"
-              src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
-              width="250"
-              height="18"
-            />
-          </a>
-        </div>
+          <div class="clock">
+              <table>
+                  <tbody>
+                      <tr>
+                          <td>🇳🇱 Amsterdam</td>
+                          <td>🇧🇷 Brazil</td>
+                          <td>🇨🇦 Canada</td>
+                      </tr>
+                      <tr>
+                          <td><a class="weatherwidget-io" href="https://forecast7.com/en/52d374d90/amsterdam/" data-font="Arial" data-icons="Climacons Animated" data-mode="Current" data-theme="pure" >Amsterdam, Netherlands</a>
+</td>
+                          <td><a class="weatherwidget-io" href="https://forecast7.com/en/n30d03n51d22/porto-alegre/" data-font="Arial" data-icons="Climacons Animated" data-mode="Current" data-theme="pure" >PORTO ALEGRE</a>
+</td>
+                          <td><a class="weatherwidget-io" href="https://forecast7.com/en/51d05n114d07/calgary/" data-font="Arial" data-icons="Climacons Animated" data-mode="Current" data-theme="pure" >CALGARY</a></td>
+                      </tr>
+                      
+                      <tr>
+                          <td><iframe src="https://free.timeanddate.com/clock/i8nqmsco/n16/tw1/th1/ts1/ta1/wt1" frameborder="0" width="145" height="18"></iframe></td>
+                          <td><iframe src="https://free.timeanddate.com/clock/i8nmg07w/n233/tw1/th1/ts1/ta1" frameborder="0" width="145" height="18"></iframe></td>
+                          <td><iframe src="https://free.timeanddate.com/clock/i8nmg07w/n55/tw1/th1/ts1/ta1" frameborder="0" width="147" height="18"></iframe></td>
+                      </tr>
+                  </tbody>
+              </table>     
+          </div>
+          <hr class="dotted">
+	 </div>
+    <script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 
-    </body>
+      </script>
+
+	</body>
 </html>
+
